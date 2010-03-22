@@ -6,7 +6,7 @@ module Marjan
       key = ip_or_host.join(',') if ip_or_host.kind_of? Array
       key ||= ip_or_host
       key = key + time_zone.to_s
-      Rails.cache.fetch(ip, :expires_in => 1.month) do 
+      Rails.cache.fetch(ip_or_host, :expires_in => 1.month) do 
         lookup_without_caching ip_or_host, time_zone
       end
     end
