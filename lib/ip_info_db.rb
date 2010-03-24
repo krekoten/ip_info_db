@@ -3,9 +3,10 @@ require 'httparty'
 require 'ostruct'
 
 module Marjan
-  class Location < OpenStruct; end
   
   class IpInfoDb
+    
+    class Location < OpenStruct; end
     
     include HTTParty
     
