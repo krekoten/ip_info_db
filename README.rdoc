@@ -8,8 +8,8 @@ API interface to http://ipinfodb.com/
   >> ip_info = Marjan::IpInfoDb.lookup '217.196.166.138'
   => #<Marjan::Location status="OK", city="Ternopil", longitude="25.5833", ip="217.196.166.138", latitude="49.55", country_code="UA", region_name="Ternopil's'ka Oblast'",   zip_postal_code="", id="0", country_name="Ukraine", region_code="22">
 
-  >> ip_info = Marjan::IpInfoDb.lookup ['17.17.17.17', 'google.com']
-  => {"66.249.80.104"=>#<Marjan::Location status="OK", city="Cabot", longitude="-92.0858", ip="66.249.80.104", latitude="34.9461", country_code="US", region_name="Arkansas", zip_postal_code="72023", id="1", country_name="United States", region_code="05">, "17.17.17.17"=>#<Marjan::Location status="OK", city="Cupertino", longitude="-122.095", ip="17.17.17.17", latitude="37.3042", country_code="US", region_name="California", zip_postal_code="95014", id="0", country_name="United States", region_code="06">}
+  Marjan::IpInfoDb.lookup ['217.196.166.137', 'google.com']
+  => {"google.com"=>#<Marjan::Location status="OK", zip_postal_code="72023", country_name="United States", region_code="05", ip="66.249.91.104", city="Cabot", longitude="-92.0858", latitude="34.9461", country_code="US", id="1", region_name="Arkansas">, "217.196.166.137"=>#<Marjan::Location status="OK", zip_postal_code="", country_name="Ukraine", region_code="22", ip="217.196.166.137", city="Ternopil", longitude="25.5833", latitude="49.55", country_code="UA", id="0", region_name="Ternopil's'ka Oblast'">}
 
   >> ip_info = Marjan::IpInfoDb.lookup 'wrong ip or host'
   => nil
