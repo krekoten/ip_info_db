@@ -1,6 +1,7 @@
 =IpInfoDb
 
 API interface to http://ipinfodb.com/
+Supports caching when used with rails
 
 
 ==Example
@@ -13,6 +14,15 @@ API interface to http://ipinfodb.com/
 
   >> ip_info = Marjan::IpInfoDb.lookup 'wrong ip or host'
   => nil
+
+==Installation
+
+In Rails:
+  * as plugin:
+    ./script/plugin install git://github.com/krekoten/marjan_ip_info_db.git
+  * as gem coming soon...
+Other:
+  * as gem coming soon...
 
 ==Author
 
